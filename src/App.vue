@@ -2,7 +2,7 @@
   <div class="app">
     <div class="home">
       <div class="nav">
-        <a href="https://www.blog.v2l.tech">博客</a>
+        <a target="_blank" href="http://blog.v2l.tech/">博客</a>
       </div>
     </div>
 
