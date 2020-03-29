@@ -1,31 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="app">
+    <div class="home">
+      <div class="nav">
+        <a href="https://www.blog.v2l.tech">博客</a>
+      </div>
     </div>
-    <router-view/>
+
+    <Sphere />
   </div>
 </template>
 
+<script>
+import Sphere from '@/components/Sphere.vue';
+
+export default {
+  name: 'App',
+  components: { Sphere },
+};
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #bd9779 0%, #a6cdfb 100%);
+  .app {
+    color: #fff;
+    .home {
+      width: 100%;
+      position: absolute;
+      .nav {
+        text-align: left;
+        margin: 20px;
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
     }
   }
 }
